@@ -29,6 +29,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Dlabs.Resources.Web", "Dlab
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DexLabs_Trace", "..\..\DEX-LOG\Dex.Trace\DexLabs_Trace.csproj", "{6B951731-CFAA-4894-91B5-FFEA4B7B8591}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{9A7E6B2C-DE44-48D8-B652-3DF3EA0FBC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A7E6B2C-DE44-48D8-B652-3DF3EA0FBC7D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A7E6B2C-DE44-48D8-B652-3DF3EA0FBC7D}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6B951731-CFAA-4894-91B5-FFEA4B7B8591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B951731-CFAA-4894-91B5-FFEA4B7B8591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B951731-CFAA-4894-91B5-FFEA4B7B8591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B951731-CFAA-4894-91B5-FFEA4B7B8591}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
