@@ -1,0 +1,2 @@
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Console\obj\Debug\Dlabs.Autonumber.Console.csprojAssemblyReference.cache
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Console\obj\Debug\Dlabs.Autonumber.Console.csproj.CoreCompileInputs.cache

@@ -1,0 +1,12 @@
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\bin\Debug\Dxrm.Autonumber.dll
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\bin\Debug\Dxrm.Autonumber.pdb
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\bin\Debug\Microsoft.IdentityModel.dll
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\bin\Debug\Microsoft.Xrm.Sdk.dll
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\bin\Debug\Microsoft.Xrm.Sdk.xml
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\obj\Debug\Dlabs.Autonumber.csprojAssemblyReference.cache
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\obj\Debug\Dlabs.Autonumber.csproj.CoreCompileInputs.cache
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\obj\Debug\Dlabs.Autonumber.csproj.CopyComplete
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\obj\Debug\Dxrm.Autonumber.dll
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\obj\Debug\Dxrm.Autonumber.pdb

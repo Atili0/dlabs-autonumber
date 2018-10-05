@@ -1,0 +1,81 @@
+{
+  "webresources": [
+    {
+      "profile": "default,debug",
+      "root": "Webresources/",
+      "solution": null,
+      "files": [
+        {
+          "uniquename": "new_/js/somefile.js",
+          "file": "new_\\js\\somefile.js",
+          "description": "",
+          "ts": null
+        },
+        {
+          "uniquename": "dx__/js/dx_confignumber.FormEvents.js",
+          "file": "/js/dx_confignumber.FormEvents.js",
+          "description": null,
+          "ts": null
+        },
+        {
+          "uniquename": "dx__/js/v9_s2gfunction.js",
+          "file": "/js/v9_s2gfunction.js",
+          "description": "",
+          "ts": null
+        },
+        {
+          "uniquename": "dx__/js/Scripts/require.js",
+          "file": "/js/Scripts/require.js",
+          "description": "",
+          "ts": null
+        }
+      ]
+    }
+  ],
+  "plugins": [
+    {
+      "profile": "default,debug",
+      "assemblypath": "bin\\Debug",
+      "classRegex": null
+    }
+  ],
+  "earlyboundtypes": [
+    {
+      "entities": "account,contact,quote",
+      "actions": "dev1_simpleaction",
+      "generateOptionsetEnums": true,
+      "generateGlobalOptionsets": false,
+      "generateStateEnums": true,
+      "filename": "EarlyBoundTypes.cs",
+      "classNamespace": "",
+      "serviceContextName": "XrmSvc"
+    }
+  ],
+  "solutions": [
+    {
+      "profile": "default,debug",
+      "solution_uniquename": "spkltestsolution",
+      "packagepath": "package",
+      "solutionpath": "solution_{0}_{1}_{2}_{3}.zip",
+      "packagetype": "unmanaged",
+      "increment_on_import": false,
+      "map": [
+        {
+          "map": "path",
+          "from": "PluginAssemblies\\**\\*.*",
+          "to": "..\\..\\Plugins\\bin\\**"
+        },
+        {
+          "map": "path",
+          "from": "WebResources\\*.*",
+          "to": "..\\..\\Webresources\\Webresources\\**"
+        },
+        {
+          "map": "path",
+          "from": "WebResources\\**\\*.*",
+          "to": "..\\..\\Webresources\\Webresources\\**"
+        }
+      ]
+    }
+  ]
+}
