@@ -10,9 +10,553 @@
 
 [assembly: Microsoft.Xrm.Sdk.Client.ProxyTypesAssemblyAttribute()]
 
-namespace Dlabs.Autonumber
+namespace Dlabs_Autonumber
 {
 	
+	
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.0.0.9154")]
+	public enum cel_autonumberState
+	{
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Active = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		Inactive = 1,
+	}
+	
+	/// <summary>
+	/// 
+	/// </summary>
+	[System.Runtime.Serialization.DataContractAttribute()]
+	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("cel_autonumber")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.0.0.9154")]
+	public partial class cel_autonumber : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	{
+		
+		/// <summary>
+		/// Default Constructor.
+		/// </summary>
+		public cel_autonumber() : 
+				base(EntityLogicalName)
+		{
+		}
+		
+		public const string EntityLogicalName = "cel_autonumber";
+		
+		public const string PrimaryIdAttribute = "cel_autonumberid";
+		
+		public const string PrimaryNameAttribute = "cel_name";
+		
+		public const int EntityTypeCode = 10216;
+		
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+		
+		public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
+		
+		private void OnPropertyChanged(string propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void OnPropertyChanging(string propertyName)
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, new System.ComponentModel.PropertyChangingEventArgs(propertyName));
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_attributename")]
+		public string cel_AttributeName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("cel_attributename");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_AttributeName");
+				this.SetAttributeValue("cel_attributename", value);
+				this.OnPropertyChanged("cel_AttributeName");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for entity instances
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_autonumberid")]
+		public System.Nullable<System.Guid> cel_autonumberId
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.Guid>>("cel_autonumberid");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_autonumberId");
+				this.SetAttributeValue("cel_autonumberid", value);
+				if (value.HasValue)
+				{
+					base.Id = value.Value;
+				}
+				else
+				{
+					base.Id = System.Guid.Empty;
+				}
+				this.OnPropertyChanged("cel_autonumberId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_autonumberid")]
+		public override System.Guid Id
+		{
+			get
+			{
+				return base.Id;
+			}
+			set
+			{
+				this.cel_autonumberId = value;
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_conditionaloptionset")]
+		public string cel_ConditionalOptionSet
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("cel_conditionaloptionset");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_ConditionalOptionSet");
+				this.SetAttributeValue("cel_conditionaloptionset", value);
+				this.OnPropertyChanged("cel_ConditionalOptionSet");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_conditionalvalue")]
+		public System.Nullable<int> cel_ConditionalValue
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("cel_conditionalvalue");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_ConditionalValue");
+				this.SetAttributeValue("cel_conditionalvalue", value);
+				this.OnPropertyChanged("cel_ConditionalValue");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_digits")]
+		public System.Nullable<int> cel_Digits
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("cel_digits");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_Digits");
+				this.SetAttributeValue("cel_digits", value);
+				this.OnPropertyChanged("cel_Digits");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_entityname")]
+		public string cel_EntityName
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("cel_entityname");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_EntityName");
+				this.SetAttributeValue("cel_entityname", value);
+				this.OnPropertyChanged("cel_EntityName");
+			}
+		}
+		
+		/// <summary>
+		/// The name of the custom entity.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_name")]
+		public string cel_name
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("cel_name");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_name");
+				this.SetAttributeValue("cel_name", value);
+				this.OnPropertyChanged("cel_name");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_nextnumber")]
+		public System.Nullable<int> cel_NextNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("cel_nextnumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_NextNumber");
+				this.SetAttributeValue("cel_nextnumber", value);
+				this.OnPropertyChanged("cel_NextNumber");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_prefix")]
+		public string cel_Prefix
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("cel_prefix");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_Prefix");
+				this.SetAttributeValue("cel_prefix", value);
+				this.OnPropertyChanged("cel_Prefix");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_preview")]
+		public string cel_Preview
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("cel_preview");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_Preview");
+				this.SetAttributeValue("cel_preview", value);
+				this.OnPropertyChanged("cel_Preview");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_suffix")]
+		public string cel_Suffix
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("cel_suffix");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_Suffix");
+				this.SetAttributeValue("cel_suffix", value);
+				this.OnPropertyChanged("cel_Suffix");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_triggerattribute")]
+		public string cel_TriggerAttribute
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("cel_triggerattribute");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_TriggerAttribute");
+				this.SetAttributeValue("cel_triggerattribute", value);
+				this.OnPropertyChanged("cel_TriggerAttribute");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("cel_triggerevent")]
+		public Microsoft.Xrm.Sdk.OptionSetValue cel_TriggerEvent
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("cel_triggerevent");
+			}
+			set
+			{
+				this.OnPropertyChanging("cel_TriggerEvent");
+				this.SetAttributeValue("cel_triggerevent", value);
+				this.OnPropertyChanged("cel_TriggerEvent");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
+		public System.Nullable<System.DateTime> CreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("createdon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who created the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdonbehalfby");
+			}
+			set
+			{
+				this.OnPropertyChanging("CreatedOnBehalfBy");
+				this.SetAttributeValue("createdonbehalfby", value);
+				this.OnPropertyChanged("CreatedOnBehalfBy");
+			}
+		}
+		
+		/// <summary>
+		/// Sequence number of the import that created this record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("importsequencenumber")]
+		public System.Nullable<int> ImportSequenceNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("importsequencenumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("ImportSequenceNumber");
+				this.SetAttributeValue("importsequencenumber", value);
+				this.OnPropertyChanged("ImportSequenceNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedby");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time when the record was modified.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
+		public System.Nullable<System.DateTime> ModifiedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("modifiedon");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier of the delegate user who modified the record.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedonbehalfby");
+			}
+			set
+			{
+				this.OnPropertyChanging("ModifiedOnBehalfBy");
+				this.SetAttributeValue("modifiedonbehalfby", value);
+				this.OnPropertyChanged("ModifiedOnBehalfBy");
+			}
+		}
+		
+		/// <summary>
+		/// Unique identifier for the organization
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("organizationid")]
+		public Microsoft.Xrm.Sdk.EntityReference OrganizationId
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("organizationid");
+			}
+		}
+		
+		/// <summary>
+		/// Date and time that the record was migrated.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overriddencreatedon")]
+		public System.Nullable<System.DateTime> OverriddenCreatedOn
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overriddencreatedon");
+			}
+			set
+			{
+				this.OnPropertyChanging("OverriddenCreatedOn");
+				this.SetAttributeValue("overriddencreatedon", value);
+				this.OnPropertyChanged("OverriddenCreatedOn");
+			}
+		}
+		
+		/// <summary>
+		/// Status of the Auto Number
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
+		public System.Nullable<Dlabs_Autonumber.cel_autonumberState> StateCode
+		{
+			get
+			{
+				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statecode");
+				if ((optionSet != null))
+				{
+					return ((Dlabs_Autonumber.cel_autonumberState)(System.Enum.ToObject(typeof(Dlabs_Autonumber.cel_autonumberState), optionSet.Value)));
+				}
+				else
+				{
+					return null;
+				}
+			}
+			set
+			{
+				this.OnPropertyChanging("StateCode");
+				if ((value == null))
+				{
+					this.SetAttributeValue("statecode", null);
+				}
+				else
+				{
+					this.SetAttributeValue("statecode", new Microsoft.Xrm.Sdk.OptionSetValue(((int)(value))));
+				}
+				this.OnPropertyChanged("StateCode");
+			}
+		}
+		
+		/// <summary>
+		/// Reason for the status of the Auto Number
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
+		public Microsoft.Xrm.Sdk.OptionSetValue StatusCode
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statuscode");
+			}
+			set
+			{
+				this.OnPropertyChanging("StatusCode");
+				this.SetAttributeValue("statuscode", value);
+				this.OnPropertyChanged("StatusCode");
+			}
+		}
+		
+		/// <summary>
+		/// For internal use only.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezoneruleversionnumber")]
+		public System.Nullable<int> TimeZoneRuleVersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("timezoneruleversionnumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("TimeZoneRuleVersionNumber");
+				this.SetAttributeValue("timezoneruleversionnumber", value);
+				this.OnPropertyChanged("TimeZoneRuleVersionNumber");
+			}
+		}
+		
+		/// <summary>
+		/// Time zone code that was in use when the record was created.
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("utcconversiontimezonecode")]
+		public System.Nullable<int> UTCConversionTimeZoneCode
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("utcconversiontimezonecode");
+			}
+			set
+			{
+				this.OnPropertyChanging("UTCConversionTimeZoneCode");
+				this.SetAttributeValue("utcconversiontimezonecode", value);
+				this.OnPropertyChanged("UTCConversionTimeZoneCode");
+			}
+		}
+		
+		/// <summary>
+		/// Version Number
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("versionnumber")]
+		public System.Nullable<long> VersionNumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
+			}
+		}
+	}
 	
 	[System.Runtime.Serialization.DataContractAttribute()]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("CrmSvcUtil", "9.0.0.9154")]
@@ -155,6 +699,24 @@ namespace Dlabs.Autonumber
 		/// <summary>
 		/// 
 		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dx_currentnumber")]
+		public string dx_currentnumber
+		{
+			get
+			{
+				return this.GetAttributeValue<string>("dx_currentnumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("dx_currentnumber");
+				this.SetAttributeValue("dx_currentnumber", value);
+				this.OnPropertyChanged("dx_currentnumber");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dx_entityname")]
 		public string dx_entityname
 		{
@@ -167,6 +729,24 @@ namespace Dlabs.Autonumber
 				this.OnPropertyChanging("dx_entityname");
 				this.SetAttributeValue("dx_entityname", value);
 				this.OnPropertyChanged("dx_entityname");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dx_event")]
+		public Microsoft.Xrm.Sdk.OptionSetValue dx_event
+		{
+			get
+			{
+				return this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("dx_event");
+			}
+			set
+			{
+				this.OnPropertyChanging("dx_event");
+				this.SetAttributeValue("dx_event", value);
+				this.OnPropertyChanged("dx_event");
 			}
 		}
 		
@@ -239,6 +819,24 @@ namespace Dlabs.Autonumber
 				this.OnPropertyChanging("dx_name");
 				this.SetAttributeValue("dx_name", value);
 				this.OnPropertyChanged("dx_name");
+			}
+		}
+		
+		/// <summary>
+		/// 
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("dx_nextnumber")]
+		public System.Nullable<int> dx_nextnumber
+		{
+			get
+			{
+				return this.GetAttributeValue<System.Nullable<int>>("dx_nextnumber");
+			}
+			set
+			{
+				this.OnPropertyChanging("dx_nextnumber");
+				this.SetAttributeValue("dx_nextnumber", value);
+				this.OnPropertyChanged("dx_nextnumber");
 			}
 		}
 		
@@ -390,14 +988,14 @@ namespace Dlabs.Autonumber
 		/// Status of the Config Number
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
-		public System.Nullable<Dlabs.Autonumber.dx_confignumberState> StateCode
+		public System.Nullable<Dlabs_Autonumber.dx_confignumberState> StateCode
 		{
 			get
 			{
 				Microsoft.Xrm.Sdk.OptionSetValue optionSet = this.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValue>("statecode");
 				if ((optionSet != null))
 				{
-					return ((Dlabs.Autonumber.dx_confignumberState)(System.Enum.ToObject(typeof(Dlabs.Autonumber.dx_confignumberState), optionSet.Value)));
+					return ((Dlabs_Autonumber.dx_confignumberState)(System.Enum.ToObject(typeof(Dlabs_Autonumber.dx_confignumberState), optionSet.Value)));
 				}
 				else
 				{
@@ -502,13 +1100,24 @@ namespace Dlabs.Autonumber
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="Dlabs.Autonumber.dx_confignumber"/> entities.
+		/// Gets a binding to the set of all <see cref="Dlabs_Autonumber.cel_autonumber"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<Dlabs.Autonumber.dx_confignumber> dx_confignumberSet
+		public System.Linq.IQueryable<Dlabs_Autonumber.cel_autonumber> cel_autonumberSet
 		{
 			get
 			{
-				return this.CreateQuery<Dlabs.Autonumber.dx_confignumber>();
+				return this.CreateQuery<Dlabs_Autonumber.cel_autonumber>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="Dlabs_Autonumber.dx_confignumber"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<Dlabs_Autonumber.dx_confignumber> dx_confignumberSet
+		{
+			get
+			{
+				return this.CreateQuery<Dlabs_Autonumber.dx_confignumber>();
 			}
 		}
 	}

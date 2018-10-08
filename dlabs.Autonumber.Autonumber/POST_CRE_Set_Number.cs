@@ -1,8 +1,9 @@
 ﻿using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
 using System;
+using System.Linq;
 
-namespace Dxrm.Autonumber
+namespace Dlabs_Autonumber
 {
     public class POST_CRE_Set_Number : IPlugin
     {
@@ -25,9 +26,31 @@ namespace Dxrm.Autonumber
 
             try
             {
+                var _parametros = new Parametros();
                 Entity entity = (Entity)context.InputParameters["Target"];
 
-                //TODO: Do stuff
+                using (CrmServiceContext _context = new CrmServiceContext(service))
+                {
+                    _parametros.o_Entity = (from auto in _context.dx_confignumberSet
+                             where auto.dx_entityname == context.PrimaryEntityName
+                             select auto).FirstOrDefault();
+                }
+
+                var _prefix = _parametros.o_Entity.dx_prefix.ToString();
+                var _subffix = _parametros.o_Entity.dx_suffix.ToString();
+                var _incremen = _parametros.o_Entity.dx_increment.Value;
+                var _length = _parametros.o_Entity.dx_length.Value;
+                var _currentNumber = _parametros.o_Entity.dx_currentnumber.ToString();
+                var _nextnumber = _parametros.o_Entity.dx_nextnumber.Value + _incremen;
+
+                var _completeNumber = $"{_prefix}{_nextnumber.ToString().PadLeft(_length, '0')}{_subffix}";
+
+                Entity _To_Update = new Entity(_parametros.o_Entity.dx_entityname);
+                _To_Update.Attributes[_parametros.o_Entity.dx_fieldname] = _completeNumber;
+                service.Update(_To_Update);
+
+
+
             }
             catch (Exception e)
             {
