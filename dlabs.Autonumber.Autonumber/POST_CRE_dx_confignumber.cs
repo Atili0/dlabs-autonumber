@@ -19,7 +19,7 @@ namespace Dlabs_Autonumber
         }
         #endregion
 
-        const string _MasterPluginName = "Dlabs_Autonumber.";
+        const string _MasterPluginName = "Dlabs_Autonumber_";
 
         public void Execute(IServiceProvider serviceProvider)
         {
@@ -52,7 +52,7 @@ namespace Dlabs_Autonumber
                     _parametros.o_Config = new ConfigAutonumber()
                     {
                         s_EntityName = entity.Attributes["dx_entityname"].ToString(),
-                        s_EventName = ((OptionSetValue)entity.Attributes["event"]).Value == 425420000 ? "Create" : "Update"
+                        s_EventName = ((OptionSetValue)entity.Attributes["dx_event"]).Value == 425420000 ? "Create" : "Update"
                     };
 
                     _parametros.g_PluginTypeId = _context.CreateQuery("plugintype")
@@ -78,7 +78,7 @@ namespace Dlabs_Autonumber
                 _entity.Attributes["plugintypeid"] = new EntityReference("plugintype", _parametros.g_PluginTypeId);
                 _entity.Attributes["sdkmessageid"] = new EntityReference("sdkmessage", _parametros.g_MessageId);
                 _entity.Attributes["configuration"] = _parametros.o_Config.ToJson();
-                _entity.Attributes["stage"] = PipelineStage.PreOperation.ToOptionSetValue();
+                _entity.Attributes["stage"] = _parametros.o_Config.s_EventName == "Create" ? PipelineStage.PostOperation.ToOptionSetValue() : PipelineStage.PreOperation.ToOptionSetValue();
                 _entity.Attributes["rank"] = 1;
                 _entity.Attributes["impersonatinguserid"] = new EntityReference("systemuser", context.UserId);
                 _entity.Attributes["sdkmessagefilterid"] = new EntityReference("sdkmessagefilter", _parametros.g_FilterId);

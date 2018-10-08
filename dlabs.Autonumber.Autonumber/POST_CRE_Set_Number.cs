@@ -41,16 +41,17 @@ namespace Dlabs_Autonumber
                 var _incremen = _parametros.o_Entity.dx_increment.Value;
                 var _length = _parametros.o_Entity.dx_length.Value;
                 var _currentNumber = _parametros.o_Entity.dx_currentnumber.ToString();
-                var _nextnumber = _parametros.o_Entity.dx_nextnumber.Value + _incremen;
+
+                var _nextnumber = 0;
+                if (_parametros.o_Entity.dx_nextnumber != null)
+                    _nextnumber = _parametros.o_Entity.dx_nextnumber.Value + _incremen;
+                else
+                    _nextnumber += _incremen;
 
                 var _completeNumber = $"{_prefix}{_nextnumber.ToString().PadLeft(_length, '0')}{_subffix}";
 
-                Entity _To_Update = new Entity(_parametros.o_Entity.dx_entityname);
-                _To_Update.Attributes[_parametros.o_Entity.dx_fieldname] = _completeNumber;
-                service.Update(_To_Update);
-
-
-
+                _parametros.o_Entity.Attributes[_parametros.o_Entity.dx_fieldname] = _completeNumber;
+                service.Update(_parametros.o_Entity);
             }
             catch (Exception e)
             {

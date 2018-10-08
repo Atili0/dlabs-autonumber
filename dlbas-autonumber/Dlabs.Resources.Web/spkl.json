@@ -20,11 +20,41 @@
         {
           "uniquename": "dx__/js/v9_s2gfunction.js",
           "file": "/js/v9_s2gfunction.js",
-          "description": "",
+          "description": null,
           "ts": null
         },
         {
           "uniquename": "dx__/js/Scripts/require.js",
+          "file": "/js/Scripts/require.js",
+          "description": null,
+          "ts": null
+        },
+        {
+          "uniquename": "dx_/js/dx_confignumber.FieldEvents.js",
+          "file": "/js/dx_confignumber.FieldEvents.js",
+          "description": null,
+          "ts": null
+        },
+        {
+          "uniquename": "dx_/js/dx_confignumber.Main.js",
+          "file": "/js/dx_confignumber.Main.js",
+          "description": null,
+          "ts": null
+        },
+        {
+          "uniquename": "dx_/js/dx_confignumber.FormEvents.js",
+          "file": "/js/dx_confignumber.FormEvents.js",
+          "description": null,
+          "ts": null
+        },
+        {
+          "uniquename": "dx_/js/v9_s2gfunction.js",
+          "file": "/js/v9_s2gfunction.js",
+          "description": null,
+          "ts": null
+        },
+        {
+          "uniquename": "dx_/js/Scripts/require.js",
           "file": "/js/Scripts/require.js",
           "description": "",
           "ts": null

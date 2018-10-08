@@ -1,5 +1,4 @@
 C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\obj\Debug\Dlabs.Autonumber.csproj.CoreCompileInputs.cache
-C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\obj\Debug\Dlabs.Autonumber.csprojAssemblyReference.cache
 C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\obj\Debug\Dxrm_Autonumber.dll
 C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\obj\Debug\Dxrm_Autonumber.pdb
 C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\bin\Debug\Dxrm_Autonumber.dll.config
@@ -11,3 +10,4 @@ C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\bin\Debug\Microsoft.Xrm
 C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
 C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\bin\Debug\Microsoft.Xrm.Sdk.xml
 C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\obj\Debug\Dlabs.Autonumber.csproj.CopyComplete
+C:\CODE\SVN\dlabs-autonumber\dlabs.Autonumber.Autonumber\obj\Debug\Dlabs.Autonumber.csprojAssemblyReference.cache

@@ -15,34 +15,51 @@ for executionContext more information in https://docs.microsoft.com/es-es/dynami
 
 'use strict';
 
-if (typeof (Dlabs) == "undefined") {
-    Dlabs = { __namespace: true };
-}
-if (typeof (Dlabs.dx_confignumber) == "undefined") {
-    Dlabs.dx_confignumber = { __namespace: true };
-}
-Dlabs.dx_confignumber.ForEvents = {
-    _formLoad: function () {
+//if (typeof (Dlabs) == "undefined") {
+//    Dlabs = { __namespace: true };
+//}
+//if (typeof (Dlabs.dx_confignumber) == "undefined") {
+//    Dlabs.dx_confignumber = { __namespace: true };
+//}
+
+dx_confignumber.ForEvents = (function () {
+    return {
+        _formLoad: formLoad,
+        _formSave: formSave
+    };
+
+    function formSave(eContext) {
+    };
+
+    function formLoad() {
         if (Xrm.Page.ui.getFormType() != 1) {
             S2G_V9.Controls.DisableControl("dx_entityname");
             S2G_V9.Controls.DisableControl("dx_fieldname");
             S2G_V9.Controls.DisableControl("dx_name");
 
-            Dlabs.dx_confignumber.ForEvents._Set_Preview_In_Autonumber();
+            Dlabs.dx_confignumber.ForEvents.attachEventsToFields();
         }
         Xrm.Page.getAttribute("cel_preview").setSubmitMode("never");
-    },
-    _Set_Preview_In_Autonumber: function () {
+    };
 
-        var _prefix = S2G_V9.Fields.GetValue("dx_prefix")
-        var _suffix = S2G_V9.Fields.GetValue("dx_suffix")
+    function attachEventsToFields() {
+
+        var field = S2G_V9.Fields.GetField('dx_increment');
+        if (field != null) {
+            field.addOnChange(Dlabs.dx_confignumber.FieldEvents._Set_Preview_In_Autonumber);
+        }
+
+        var field = S2G_V9.Fields.GetField('dx_prefix');
+        if (field != null) {
+            field.addOnChange(Dlabs.dx_confignumber.FieldEvents._Set_Preview_In_Autonumber);
+        }
+
+    };
+
+    
+})();
 
 
-        S2G_V9.Fields.SetValue("dx_preview", _prefix + Suffix)
-
-    },
-    _formSave: function (eContext) { }
-}
 /**
  * Returns the square of the number passed to the function.
  *  for formcontext more information in https://docs.microsoft.com/es-es/dynamics365/customer-engagement/developer/clientapi/clientapi-form-context
@@ -54,14 +71,16 @@ function main_load(pExecutionContext) {
     require.config({
         paths: {
             "jquery": "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min",
-            "s2gfunction": "../WebResources/relax_/js/v9_s2gfunction"
+            "s2gfunction": "../WebResources/dx_/js/v9_s2gfunction",
+            "dx_confignumber_formevent": "../WebResources/dx_/js/dx_confignumber.FormEvents",
+            "dx_confignumber_fieldevent": "../WebResources/dx_/js/dx_confignumber.FieldEvents"
         }
     });
 
-    S2G_V9.Context._executionContext = pExecutionContext;
-    S2G_V9.Context._formContext = executionContext.getFormContext();
+    require(['jquery', 's2gfunction', 'dx_confignumber_formevent', 'dx_confignumber_fieldevent'], function () {
+        S2G_V9.Context._executionContext = pExecutionContext;
+        S2G_V9.Context._formContext = S2G_V9.Context._executionContext.getFormContext();
 
-    require(['jquery', 's2gfunction'], function () {
-        Dlabs.dx_confignumber.ForEvents._formLoad();
+        dx_confignumber.ForEvents._formLoad();
     });
 };
